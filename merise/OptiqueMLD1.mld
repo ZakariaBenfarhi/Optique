@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{8B4BCFB0-BC27-4154-A8BB-F288EFC703B7}" Loaded="No" Name="OptiqueMCD" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="OptiqueMCD1.mcd"/>
+		<Model Expanded="Yes" ID="{2EDF6069-7BFD-474D-9170-6EB2846FA240}" Loaded="No" Name="OptiqueMLD" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="OptiqueMLD.mld"/>
+		<Model Expanded="Yes" ID="{4175C690-F4C4-4F72-A7F5-800C8E8F054E}" Loaded="No" Name="Définition de cas d&#39;utilisation_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="optique_use_case.moo"/>
+		<Model Expanded="Yes" ID="{F23C8C3D-12D5-4688-9ED3-F15ED1C93559}" Loaded="No" Name="activité_optique" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="activité_optique.moo"/>
+		<Model Expanded="Yes" ID="{F23C8C3D-12D5-4688-9ED3-F15ED1C93559}" Name="activité_optique" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="activité_optique.moo"/>
+		<Model Expanded="Yes" ID="{4175C690-F4C4-4F72-A7F5-800C8E8F054E}" Name="Définition de cas d&#39;utilisation_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="optique_use_case.moo"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

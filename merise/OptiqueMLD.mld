@@ -1,0 +1,3840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner AppLocale="UTF16" ID="{2EDF6069-7BFD-474D-9170-6EB2846FA240}" Label="" LastModificationDate="1619798638" Name="OptiqueMLD" Objects="162" Symbols="31" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" signature="LDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
+
+<o:RootObject Id="o1">
+<c:Children>
+<o:Model Id="o2">
+<a:ObjectID>2EDF6069-7BFD-474D-9170-6EB2846FA240</a:ObjectID>
+<a:Name>OptiqueMLD</a:Name>
+<a:Code>OPTIQUEMLD</a:Code>
+<a:CreationDate>1619567227</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {8B4BCFB0-BC27-4154-A8BB-F288EFC703B7}
+DAT 1619778600
+DLD {7F7E73B2-EC32-48C3-B2D8-2E1139952A77}
+DLD {5126CC17-8C88-415E-9C63-35B577C187B6},{7F7E73B2-EC32-48C3-B2D8-2E1139952A77}
+DLD {23C9B66E-AC5D-4C52-BC42-5FE4EA085EAF},{0853BA8E-82F9-4A37-AE1B-50C169902C68}
+DLD {D357E93E-3783-4DA3-B21E-5BF5E5A6ED42},{8FA4E2A5-77CA-465A-BBC3-34EA3F3C041B}</a:History>
+<a:PackageOptionsText>[FolderOptions]
+
+[FolderOptions\Common]
+GenerationCheckModel=Yes
+GenerationPath=
+GenerationOptions=
+GenerationTasks=
+GenerationTargets=
+GenerationSelections=</a:PackageOptionsText>
+<a:ModelOptionsText>[ModelOptions]
+
+[ModelOptions\Logical options]
+CaseSensitive=No
+DisplayName=Yes
+EnableTrans=No
+EnableRequirements=No
+Notation=4
+RlshUnique=Yes
+DefaultDttp=
+DomnCopyDttp=Yes
+DomnCopyChck=No
+DomnCopyRule=No
+DomnCopyExat=No
+DomnCopyMand=No
+DttpFullName=Yes
+RlshMigrateDomain=Yes
+RlshMigrateCheck=Yes
+RlshMigrateRule=Yes
+RlshMigrateExtd=Yes
+RlshAllowNN=No
+FKNameTemplate=%.3:PARENT%_%ATTRIBUTE%
+FKNameTemplateUsage=No
+
+[ModelOptions\Logical options\NamingOptionsTemplates]
+
+[ModelOptions\Logical options\ClssNamingOptions]
+
+[ModelOptions\Logical options\ClssNamingOptions\FILO]
+
+[ModelOptions\Logical options\ClssNamingOptions\FILO\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=&quot;\/:*?&lt;&gt;|&quot;
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\FILO\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_. &quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMEOBJ]
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMEOBJ\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMEOBJ\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMELNK]
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMELNK\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\FRMELNK\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\DefaultClass]
+
+[ModelOptions\Logical options\ClssNamingOptions\DefaultClass\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\DefaultClass\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPCKG]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPCKG\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPCKG\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMDOMN]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMDOMN\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMDOMN\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMENTT]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMENTT\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMENTT\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPROP]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPROP\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMPROP\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMIDTF]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMIDTF\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMIDTF\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMRLSH]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMRLSH\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMRLSH\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMINHR]
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMINHR\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Logical options\ClssNamingOptions\LDMINHR\Code]
+Template=
+MaxLen=254
+Case=U
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Generate]
+
+[ModelOptions\Generate\Cdm]
+CheckModel=Yes
+SaveLinks=Yes
+NameToCode=No
+
+[ModelOptions\Generate\Pdm]
+CheckModel=Yes
+SaveLinks=Yes
+NameToCode=No
+BuildTrgr=No</a:ModelOptionsText>
+<c:GenerationOrigins>
+<o:Shortcut Id="o3">
+<a:ObjectID>54CD1BAA-53BC-4B6F-94EF-89FF33D4629C</a:ObjectID>
+<a:Name>OptiqueMCD</a:Name>
+<a:Code>OPTIQUEMCD</a:Code>
+<a:CreationDate>1619778600</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:TargetStereotype/>
+<a:TargetID>8B4BCFB0-BC27-4154-A8BB-F288EFC703B7</a:TargetID>
+<a:TargetClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:TargetClassID>
+</o:Shortcut>
+</c:GenerationOrigins>
+<c:LogicalDiagrams>
+<o:LogicalDiagram Id="o4">
+<a:ObjectID>A9A5A7B0-6605-4445-A192-CE82AFCB21B6</a:ObjectID>
+<a:Name>Diagramme_1</a:Name>
+<a:Code>DIAGRAMME_1</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4042148C-4BE7-4442-88CF-4C268F28E836}
+DAT 1619567244</a:History>
+<a:DisplayPreferences>[DisplayPreferences]
+
+[DisplayPreferences\LDM]
+
+[DisplayPreferences\General]
+Adjust to text=Yes
+Snap Grid=No
+Constrain Labels=Yes
+Display Grid=No
+Show Page Delimiter=Yes
+Grid size=800
+Graphic unit=2
+Window color=255 255 255
+Background image=
+Background mode=8
+Watermark image=
+Watermark mode=8
+Show watermark on screen=No
+Gradient mode=0
+Gradient end color=255 255 255
+Show Swimlane=No
+SwimlaneVert=Yes
+TreeVert=No
+CompDark=0
+
+[DisplayPreferences\Object]
+Mode=0
+Trunc Length=80
+Word Length=80
+Word Text=!&quot;&quot;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
+Shortcut IntIcon=Yes
+Shortcut IntLoct=Yes
+Shortcut IntFullPath=No
+Shortcut IntLastPackage=Yes
+Shortcut ExtIcon=Yes
+Shortcut ExtLoct=No
+Shortcut ExtFullPath=No
+Shortcut ExtLastPackage=Yes
+Shortcut ExtIncludeModl=Yes
+EObjShowStrn=Yes
+ExtendedObject.Comment=No
+ExtendedObject.IconPicture=No
+ExtendedObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Nom de l&amp;#39;objet&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF] &lt;Separator Name=&quot;Séparateur&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Commentaire&quot; Attribute=&quot;Comment&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;LEFT&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
+ELnkShowStrn=Yes
+ELnkShowName=Yes
+ExtendedLink_SymbolLayout=&lt;Form&gt;[CRLF] &lt;Form Name=&quot;Centre&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Source&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Destination&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF]&lt;/Form&gt;
+FileObject.Stereotype=No
+FileObject.DisplayName=Yes
+FileObject.LocationOrName=No
+FileObject.IconPicture=No
+FileObject.IconMode=Yes
+FileObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;ExclusiveChoice Name=&quot;Choix exclusif&quot; Mandatory=&quot;Yes&quot; Display=&quot;HorizontalRadios&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Emplacement&quot; Attribute=&quot;LocationOrName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/ExclusiveChoice&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
+PckgStrn=Yes
+Package.Comment=No
+Package.IconPicture=No
+Package_SymbolLayout=
+Display Model Version=Yes
+EnttAttr=Yes
+PentMode=0
+PentNb=5
+EnttDttp=Yes
+EnttDomn=Yes
+EnttShowDomn=No
+EnttMand=Yes
+EnttCIdf=Yes
+EnttKeyI=Yes
+PentStrn=Yes
+IdtfStrn=Yes
+RlshName=Yes
+RlshRole=Yes
+RlshCard=No
+RlshDmnt=Yes
+RlshStrn=Yes
+InhrName=Yes
+InhrStrn=Yes
+Entity.IconPicture=No
+Entity_SymbolLayout=
+Inheritance.IconPicture=No
+Inheritance_SymbolLayout=
+EnttStrn=Yes
+EnttCmmt=No
+Association.IconPicture=No
+Association_SymbolLayout=
+AsscStrn=Yes
+AsscCmmt=No
+AsscAttr=Yes
+AsscDttp=Yes
+AsscDomn=Yes
+AsscShowDomn=No
+AsscMand=Yes
+AsscDLim=Yes
+AsscNb=5
+PassStrn=1
+LinkRole=Yes
+LinkCard=Yes
+LinkStrn=Yes
+
+[DisplayPreferences\Symbol]
+
+[DisplayPreferences\Symbol\FRMEOBJ]
+STRNFont=Arial,8,N
+STRNFont color=0, 0, 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0, 0, 0
+LABLFont=Arial,8,N
+LABLFont color=0, 0, 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=6000
+Height=2000
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=64
+Brush gradient color=192 192 192
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 255 128 128
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\FRMELNK]
+CENTERFont=Arial,8,N
+CENTERFont color=0, 0, 0
+Line style=2
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 128 255
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\FILO]
+OBJSTRNFont=Arial,8,N
+OBJSTRNFont color=0, 0, 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0, 0, 0
+LCNMFont=Arial,8,N
+LCNMFont color=0, 0, 0
+AutoAdjustToText=Yes
+Keep aspect=Yes
+Keep center=Yes
+Keep size=No
+Width=2400
+Height=2400
+Brush color=255 255 255
+Fill Color=No
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 0 0 255
+Shadow color=192 192 192
+Shadow=-1
+
+[DisplayPreferences\Symbol\LDMPCKG]
+STRNFont=Arial,8,N
+STRNFont color=0 0 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+LABLFont=Arial,8,N
+LABLFont color=0 0 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=3600
+Brush color=255 255 192
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 178 178 178
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LDMENTT]
+STRNFont=Arial,8,N
+STRNFont color=0 0 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+AttributesFont=Arial,8,N
+AttributesFont color=0 0 0
+LABLFont=Arial,8,N
+LABLFont color=0 0 0
+EntityPrimaryAttributeFont=Arial,8,U
+EntityPrimaryAttributeFont color=0 0 0
+EntityForeignAttributeFont=Arial,8,N
+EntityForeignAttributeFont color=0 0 0
+IdentifiersFont=Arial,8,N
+IdentifiersFont color=0 0 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=4000
+Brush color=234 181 21
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 64 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LDMRLSH]
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+NAMAFont=Arial,8,N
+NAMAFont color=0 0 0
+Line style=2
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 0 64
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LDMINHR]
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+AutoAdjustToText=No
+Keep aspect=No
+Keep center=No
+Keep size=Yes
+Width=1575
+Height=1000
+Brush color=250 241 211
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 64 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LDMLINH]
+Line style=2
+Pen=1 0 128 64 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\USRDEPD]
+OBJXSTRFont=Arial,8,N
+OBJXSTRFont color=0 0 0
+Line style=2
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=2 0 128 0 64
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\Free Symbol]
+Free TextFont=Arial,8,N
+Free TextFont color=0 0 0
+Line style=2
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 0 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\CDMPCKG]
+STRNFont=Arial,8,N
+STRNFont color=0 0 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+LABLFont=Arial,8,N
+LABLFont color=0 0 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=3600
+Brush color=255 255 192
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 178 178 178
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\ENTT]
+STRNFont=Arial,8,N
+STRNFont color=0 0 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+AttributesFont=Arial,8,N
+AttributesFont color=0 0 0
+LABLFont=Arial,8,N
+LABLFont color=0 0 0
+EntityPrimaryAttributeFont=Arial,8,U
+EntityPrimaryAttributeFont color=0 0 0
+IdentifiersFont=Arial,8,N
+IdentifiersFont color=0 0 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=4000
+Brush color=233 202 131
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 128 64
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\RLSH]
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+NAMAFont=Arial,8,N
+NAMAFont color=0 0 0
+Line style=2
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 0 64
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\ASSC]
+STRNFont=Arial,8,N
+STRNFont color=0 0 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+AttributesFont=Arial,8,N
+AttributesFont color=0 0 0
+LABLFont=Arial,8,N
+LABLFont color=0 0 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=3000
+Brush color=208 208 255
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 128 255
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LINK]
+ROLEFont=Arial,8,N
+ROLEFont color=0, 0, 0
+CARDFont=Arial,8,N
+CARDFont color=0, 0, 0
+Line style=2
+Pen=1 0 128 128 255
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\CDMINHR]
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0 0 0
+AutoAdjustToText=No
+Keep aspect=No
+Keep center=No
+Keep size=Yes
+Width=1575
+Height=1000
+Brush color=233 202 131
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=65
+Brush gradient color=255 255 255
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 0 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\LINH]
+Line style=2
+Pen=1 0 128 0 0
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\CDM]</a:DisplayPreferences>
+<a:PaperSize>(8268, 11693)</a:PaperSize>
+<a:PageMargins>((315,354), (433,354))</a:PageMargins>
+<a:PageOrientation>1</a:PageOrientation>
+<a:PaperSource>15</a:PaperSource>
+<c:Symbols>
+<o:RelationshipSymbol Id="o5">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-48819,-24088), (-44245,-14768))</a:Rect>
+<a:ListOfPoints>((-45211,-24088),(-45211,-20309),(-47853,-20309),(-47853,-14768))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>55</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o6"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o8"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o9">
+<a:ModificationDate>1619798492</a:ModificationDate>
+<a:Rect>((-62597,-14768), (-17458,-2175))</a:Rect>
+<a:ListOfPoints>((-62597,-2175),(-18658,-2175),(-18658,-14768),(-48236,-14768))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o10"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o11"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o12">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-48682,-1637), (-4202,16140))</a:Rect>
+<a:ListOfPoints>((-44257,16140),(-44257,-1050),(-4202,-1050))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>55</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o13"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o14"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o15"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o16">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-49445,-14589), (-4202,-463))</a:Rect>
+<a:ListOfPoints>((-48095,-14589),(-48095,-1050),(-4202,-1050))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>55</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o14"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o17"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o18">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-6123,-451), (24307,13666))</a:Rect>
+<a:ListOfPoints>((-4061,-451),(-4061,13079),(24307,13079))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>55</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o14"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o19"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o20"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o21">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-14551,14853), (1963,20410))</a:Rect>
+<a:ListOfPoints>((-14551,20410),(-3709,20410),(-3709,14853),(1963,14853))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o22"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o23"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o24"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o25">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-36644,18094), (-14551,20304))</a:Rect>
+<a:ListOfPoints>((-14551,20023),(-25031,20023),(-25031,18094),(-36644,18094))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o22"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o13"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o26"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o27">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-49457,-12593), (-30823,-226))</a:Rect>
+<a:ListOfPoints>((-30823,-226),(-30823,-5506),(-49457,-5506),(-49457,-12593))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o28"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o29"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o30">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-43435,-96), (-30678,14421))</a:Rect>
+<a:ListOfPoints>((-30678,-96),(-30678,4034),(-43435,4034),(-43435,14421))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o28"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o13"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o31"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o32">
+<a:ModificationDate>1619798638</a:ModificationDate>
+<a:Rect>((-14140,-19861), (10297,-9097))</a:Rect>
+<a:ListOfPoints>((-14140,-18615),(8947,-18615),(8947,-9097))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o33"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o34"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o35"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o36">
+<a:ModificationDate>1619798638</a:ModificationDate>
+<a:CenterTextOffset>(1980, 825)</a:CenterTextOffset>
+<a:Rect>((-45496,-18490), (-14028,-15730))</a:Rect>
+<a:ListOfPoints>((-14028,-18490),(-30336,-18490),(-30336,-15730),(-45496,-15730))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o33"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o37"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o38">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-42232,-24381), (-26264,-22334))</a:Rect>
+<a:ListOfPoints>((-26264,-23581),(-42232,-23581))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o39"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o6"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o40"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o41">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-19199,-9537), (-15899,6268))</a:Rect>
+<a:ListOfPoints>((-17975,6268),(-17975,-354),(-17123,-354),(-17123,-9537))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o42"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o43"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o44"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o45">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-48136,-14751), (-17873,7639))</a:Rect>
+<a:ListOfPoints>((-17873,6393),(-46486,6393),(-46486,-14751))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o42"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o7"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o46"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o47">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Rect>((-19211,17720), (-14111,33077))</a:Rect>
+<a:ListOfPoints>((-16661,17720),(-16661,33077))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>0</a:ArrowStyle>
+<a:LineColor>16744576</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o22"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o48"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o49"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:RelationshipSymbol Id="o50">
+<a:CreationDate>1619730251</a:CreationDate>
+<a:ModificationDate>1619730251</a:ModificationDate>
+<a:Rect>((-18337,21976), (-14813,33604))</a:Rect>
+<a:ListOfPoints>((-16575,33604),(-16575,21976))</a:ListOfPoints>
+<a:CornerStyle>2</a:CornerStyle>
+<a:ArrowStyle>14080</a:ArrowStyle>
+<a:LineColor>4194432</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>DISPNAME 0 Arial,8,N
+NAMA 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:EntitySymbol Ref="o48"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:EntitySymbol Ref="o22"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:Relationship Ref="o51"/>
+</c:Object>
+</o:RelationshipSymbol>
+<o:EntitySymbol Id="o13">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-52674,9585), (-35840,22695))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o52"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o34">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((5735,-14766), (21459,-2092))</a:Rect>
+<a:AutoAdjustToText>0</a:AutoAdjustToText>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<a:ManuallyResized>1</a:ManuallyResized>
+<c:Object>
+<o:Entity Ref="o53"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o23">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-213,9254), (16621,22364))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o54"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o7">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-55350,-19375), (-41122,-10161))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o55"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o6">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-50974,-26930), (-38632,-21246))</a:Rect>
+<a:AutoAdjustToText>0</a:AutoAdjustToText>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<a:ManuallyResized>1</a:ManuallyResized>
+<c:Object>
+<o:Entity Ref="o56"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o19">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((18495,10872), (30119,16190))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o57"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o43">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-24170,-12370), (-13780,-4130))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o58"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o22">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-22251,16166), (-6855,23880))</a:Rect>
+<a:AutoAdjustToText>0</a:AutoAdjustToText>
+<a:LineColor>16744576</a:LineColor>
+<a:FillColor>16765136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o59"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o28">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-38270,-3150), (-23382,2698))</a:Rect>
+<a:AutoAdjustToText>0</a:AutoAdjustToText>
+<a:LineColor>16744576</a:LineColor>
+<a:FillColor>16765136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<a:ManuallyResized>1</a:ManuallyResized>
+<c:Object>
+<o:Entity Ref="o60"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o14">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-11213,-5170), (2809,3070))</a:Rect>
+<a:LineColor>4227200</a:LineColor>
+<a:FillColor>8637161</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o61"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o33">
+<a:ModificationDate>1619798638</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-19233,-22250), (-9049,-14984))</a:Rect>
+<a:LineColor>16744576</a:LineColor>
+<a:FillColor>16765136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o62"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o39">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-32257,-26539), (-20275,-22539))</a:Rect>
+<a:LineColor>16744576</a:LineColor>
+<a:FillColor>16765136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o63"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o42">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-22306,4268), (-13646,8267))</a:Rect>
+<a:LineColor>16744576</a:LineColor>
+<a:FillColor>16765136</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o64"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o48">
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-23932,30456), (-7718,40644))</a:Rect>
+<a:LineColor>16512</a:LineColor>
+<a:FillColor>1422826</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o65"/>
+</c:Object>
+</o:EntitySymbol>
+<o:EntitySymbol Id="o10">
+<a:ModificationDate>1619798492</a:ModificationDate>
+<a:IconMode>-1</a:IconMode>
+<a:Rect>((-68988,-4834), (-56206,484))</a:Rect>
+<a:LineColor>16512</a:LineColor>
+<a:FillColor>1422826</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>STRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+Attributes 0 Arial,8,N
+LABL 0 Arial,8,N
+EntityPrimaryAttribute 0 Arial,8,U
+EntityForeignAttribute 0 Arial,8,N
+Identifiers 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<c:Object>
+<o:Entity Ref="o66"/>
+</c:Object>
+</o:EntitySymbol>
+</c:Symbols>
+</o:LogicalDiagram>
+</c:LogicalDiagrams>
+<c:DefaultDiagram>
+<o:LogicalDiagram Ref="o4"/>
+</c:DefaultDiagram>
+<c:Entities>
+<o:Entity Id="o52">
+<a:ObjectID>70DD7E1B-C261-4666-949A-6E9A06C66FDB</a:ObjectID>
+<a:Name>Client</a:Name>
+<a:Code>CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778517</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {74583BAC-82CA-4399-8D83-D6584CA259C4}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o67">
+<a:ObjectID>BAC87AA3-98E7-4363-A547-1E1DA6A843D4</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {EB06A636-0152-46D4-8AAF-C8EB290E8073}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o68"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o67"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o68">
+<a:ObjectID>F148D6E5-3FDC-47BF-A420-36237F987D32</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {23C9B66E-AC5D-4C52-BC42-5FE4EA085EAF}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o69">
+<a:ObjectID>7D1A06FB-B28D-4C3E-8B5B-7850585C0807</a:ObjectID>
+<a:Name>nom</a:Name>
+<a:Code>NOM</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {929B268D-4ACE-4378-B656-973654D837C1}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o70">
+<a:ObjectID>52EFDC19-62CE-4DBA-B678-A9AEFE0CE0CD</a:ObjectID>
+<a:Name>prenom</a:Name>
+<a:Code>PRENOM</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {F61FBF49-A2D2-4CEA-BB79-A8BD9985A0E6}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o71">
+<a:ObjectID>261C1B62-0E3D-4D4B-80E4-25AC80DDEBC5</a:ObjectID>
+<a:Name>email</a:Name>
+<a:Code>EMAIL</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {820AC52D-A2D0-475D-8655-3F5E3A091125}
+DAT 1619567244</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o72">
+<a:ObjectID>99DFEB6C-ACC8-4B06-97BF-397BE05FD2BD</a:ObjectID>
+<a:Name>telephone</a:Name>
+<a:Code>TELEPHONE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {3735DB3E-8560-4033-A1A4-0249DDF6C098}
+DAT 1619567244</a:History>
+<a:DataType>TXT10</a:DataType>
+<a:Length>10</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o73">
+<a:ObjectID>97E7D575-92C0-47BC-AF42-35C05F85DECC</a:ObjectID>
+<a:Name>adresse</a:Name>
+<a:Code>ADRESSE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {15BE5EFC-8225-48CF-AA20-93FE391B2508}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o74">
+<a:ObjectID>520FF600-5DB0-458F-BB9A-F9B65A4C573F</a:ObjectID>
+<a:Name>ville</a:Name>
+<a:Code>VILLE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {520017A1-046A-4020-85A1-5B068A4A556A}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o75">
+<a:ObjectID>1A105F19-84BB-4B09-8F4B-7A72C33EACC5</a:ObjectID>
+<a:Name>date_creation_compte</a:Name>
+<a:Code>DATE_CREATION_COMPTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {95FB2039-2AA8-4FE1-9F3E-A09DCD225581}
+DAT 1619567244</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o76">
+<a:ObjectID>A30362A5-B2B1-4E6B-A79D-8DDBAFC096D2</a:ObjectID>
+<a:Name>status</a:Name>
+<a:Code>STATUS</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570852</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4C937E12-814D-4B36-92C9-28D5CDF06302}
+DAT 1619567244
+ATT NAME
+ATT CODE</a:History>
+<a:DataType>BL</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o77">
+<a:ObjectID>54F62F2C-67F0-46C8-A5B4-74168A8BCCE3</a:ObjectID>
+<a:Name>img_client</a:Name>
+<a:Code>IMG_CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {D71125C9-004D-4465-B44F-8F18216B0F83}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o78">
+<a:ObjectID>4E4B4430-0D84-432C-902D-AC98FD28C600</a:ObjectID>
+<a:Name>couv_medicale</a:Name>
+<a:Code>COUV_MEDICALE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {6F9A13BC-06A7-446C-921C-4722D1932A47}
+DAT 1619778386</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o79">
+<a:ObjectID>BDB9DA5D-8437-4970-9046-50A363EE8154</a:ObjectID>
+<a:Name>pwd</a:Name>
+<a:Code>PWD</a:Code>
+<a:CreationDate>1619570820</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570852</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o53">
+<a:ObjectID>332F153F-32B8-4B7C-922E-9D8956346230</a:ObjectID>
+<a:Name>Fournisseur</a:Name>
+<a:Code>FOURNISSEUR</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5B822B8C-7B0E-4DC5-B59B-F2DBCA28900B}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o80">
+<a:ObjectID>DA49DCDF-851C-4D16-B1B6-8F2D4AB4665B</a:ObjectID>
+<a:Name>ref_fourni</a:Name>
+<a:Code>REF_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {33CD3668-62EC-421F-9D57-83582672A370}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o81"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o80"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o81">
+<a:ObjectID>C838C422-D724-40F7-AAF2-AEAFB4CC8BBB</a:ObjectID>
+<a:Name>ref_fourni</a:Name>
+<a:Code>REF_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {B97A5FFE-B3C9-4AE2-9A89-CA991AFE2C5D}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o82">
+<a:ObjectID>B1B65DD5-873C-47A4-A385-ECDC839011B5</a:ObjectID>
+<a:Name>nomFourni</a:Name>
+<a:Code>NOMFOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {9E2C50B5-38EE-4486-A495-9467F8F850E6}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o83">
+<a:ObjectID>7A4C48BC-77A9-4CDE-B532-8A23641CC2DA</a:ObjectID>
+<a:Name>prenomFourni</a:Name>
+<a:Code>PRENOMFOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {9DB5832A-DB90-40A1-91B4-2189A3C711D5}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o84">
+<a:ObjectID>814FCB97-6192-463D-83C3-CC08711A5FD5</a:ObjectID>
+<a:Name>email_fourni</a:Name>
+<a:Code>EMAIL_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4E1D9E0F-ED85-429A-B9BF-50258D9DA5E6}
+DAT 1619567244</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o85">
+<a:ObjectID>6A882DE5-0B77-4879-B6BD-CD4B752766FC</a:ObjectID>
+<a:Name>tele_fourni</a:Name>
+<a:Code>TELE_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {69E75E21-17D1-4F6F-9F57-2A6036B34B27}
+DAT 1619567244</a:History>
+<a:DataType>TXT10</a:DataType>
+<a:Length>10</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o86">
+<a:ObjectID>645F4D84-70C5-42DF-A604-7817E610E40C</a:ObjectID>
+<a:Name>adresse_fourni</a:Name>
+<a:Code>ADRESSE_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {972E9EC1-B5E4-4A2A-AC01-831B4E05B26C}
+DAT 1619567244</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o87">
+<a:ObjectID>8994F84A-765C-41BF-AF38-828F3B23B6CE</a:ObjectID>
+<a:Name>ville_fourni</a:Name>
+<a:Code>VILLE_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {019898A4-2058-4542-998F-D0915A4B5763}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o88">
+<a:ObjectID>DEC3FFD4-69C0-4F71-BE1F-0FAF92528E71</a:ObjectID>
+<a:Name>date_creation_compte</a:Name>
+<a:Code>DATE_CREATION_COMPTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570938</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {10DB6D82-8E05-4363-B346-1667B59AF8DA}
+DAT 1619567244
+ATT NAME
+ATT CODE</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o89">
+<a:ObjectID>025D664D-0EB3-4D48-93FB-E893D30EF25C</a:ObjectID>
+<a:Name>status</a:Name>
+<a:Code>STATUS</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570938</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {2DC581A3-2ADA-44E3-8D88-D69E70FA47AA}
+DAT 1619567244
+ATT NAME
+ATT CODE</a:History>
+<a:DataType>BL</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o90">
+<a:ObjectID>0B7827B6-E036-4C33-A3AF-87ECB6C9DFA3</a:ObjectID>
+<a:Name>img_fourni</a:Name>
+<a:Code>IMG_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {45380B24-C5BA-44AA-A76A-31CEF8F01133}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o91">
+<a:ObjectID>D15A6CBB-9EA0-46E8-8ED7-290CCE3B6703</a:ObjectID>
+<a:Name>couv_medicale</a:Name>
+<a:Code>COUV_MEDICALE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {C43EF5BC-F08D-4C74-8644-817A634302EE}
+DAT 1619778386</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o92">
+<a:ObjectID>BE85D32E-C21F-4996-9F6F-C52DA013622A</a:ObjectID>
+<a:Name>pwd</a:Name>
+<a:Code>PWD</a:Code>
+<a:CreationDate>1619570895</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570938</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o54">
+<a:ObjectID>A2107294-0618-4882-AA06-CB760D74E90A</a:ObjectID>
+<a:Name>Opticien</a:Name>
+<a:Code>OPTICIEN</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {6427A449-E521-4520-96BE-5F5D90E211DF}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o93">
+<a:ObjectID>F0266CA2-625F-4631-8215-0A2608C95A78</a:ObjectID>
+<a:Name>ref_opti</a:Name>
+<a:Code>REF_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {FB191909-1911-47B9-A467-32AB482A20AC}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o94"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o93"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o94">
+<a:ObjectID>9561031B-6060-45CA-B316-2A690B756CD4</a:ObjectID>
+<a:Name>ref_opti</a:Name>
+<a:Code>REF_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {1F8ADE85-A2DC-4FC9-B314-ABB4392ADA76}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o95">
+<a:ObjectID>27E0DC6F-23F1-48B4-AEC4-6DA096803627</a:ObjectID>
+<a:Name>nomOpti</a:Name>
+<a:Code>NOMOPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {CA734F58-2D01-4FAB-8583-492DAD53BDAA}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o96">
+<a:ObjectID>FC296C4F-57F5-4458-B1E1-E94A9BA57CB3</a:ObjectID>
+<a:Name>prenomOpti</a:Name>
+<a:Code>PRENOMOPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {DCE4C4AD-2713-4CA0-AE11-F9D251312865}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o97">
+<a:ObjectID>DDD1152A-5002-4006-8FF1-B4B0C952B535</a:ObjectID>
+<a:Name>email_Opti</a:Name>
+<a:Code>EMAIL_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {00B989FA-B26A-41C0-8732-A4FA9F5C802E}
+DAT 1619567244</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o98">
+<a:ObjectID>FD155570-37B2-4048-89AB-254EE35B1E49</a:ObjectID>
+<a:Name>tele_Opti</a:Name>
+<a:Code>TELE_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {3F418EB7-CB3A-4A53-9D3E-9CFCACE2C463}
+DAT 1619567244</a:History>
+<a:DataType>TXT10</a:DataType>
+<a:Length>10</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o99">
+<a:ObjectID>4C54ABC7-5352-4D4F-B178-A204F7D2DE8B</a:ObjectID>
+<a:Name>adresse_Opti</a:Name>
+<a:Code>ADRESSE_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5FB5BCE4-0F0A-4059-911D-38B595FD25AD}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o100">
+<a:ObjectID>91117976-E3E0-4282-B46E-3876717CF41C</a:ObjectID>
+<a:Name>ville_Opti</a:Name>
+<a:Code>VILLE_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {A938D1AB-A103-404C-B931-C3D81A5C3919}
+DAT 1619567244</a:History>
+<a:DataType>TXT20</a:DataType>
+<a:Length>20</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o101">
+<a:ObjectID>480A92C8-E25D-457D-A2E0-432F18B4AA89</a:ObjectID>
+<a:Name>date_creation_compte</a:Name>
+<a:Code>DATE_CREATION_COMPTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {F2E1406E-E390-411C-857D-2A839301FF00}
+DAT 1619567244</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o102">
+<a:ObjectID>94F1D813-D9F1-417E-B703-98F240987C24</a:ObjectID>
+<a:Name>status</a:Name>
+<a:Code>STATUS</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570887</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {7F86934F-944B-4C79-88F5-506C6AC361AB}
+DAT 1619567244
+ATT NAME
+ATT CODE</a:History>
+<a:DataType>BL</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o103">
+<a:ObjectID>C54D5797-4D28-4570-A427-9DC08284F85F</a:ObjectID>
+<a:Name>img_opti</a:Name>
+<a:Code>IMG_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5B5C3D25-0001-4F19-A0A9-67D6FF1EAD9C}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o104">
+<a:ObjectID>24705B30-2094-4C29-98C7-887C97820CC3</a:ObjectID>
+<a:Name>couv_medicale</a:Name>
+<a:Code>COUV_MEDICALE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {6A7B1F34-5BDC-4F0B-8C63-D364F65A6DF3}
+DAT 1619778386</a:History>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o105">
+<a:ObjectID>9E79D221-9329-452C-817A-22B041CA0948</a:ObjectID>
+<a:Name>pwd</a:Name>
+<a:Code>PWD</a:Code>
+<a:CreationDate>1619570858</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619570887</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>TXT50</a:DataType>
+<a:Length>50</a:Length>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o55">
+<a:ObjectID>B7B9535D-81FB-4AC6-84C5-4DD1A114E9CA</a:ObjectID>
+<a:Name>Produit</a:Name>
+<a:Code>PRODUIT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619796682</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {9FC58DA0-7471-4C7F-B8FD-64E9F3970842}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o106">
+<a:ObjectID>F177EAB0-B707-4474-9053-B62E71D646DF</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {C5750A95-5061-451D-9628-5CC833C3CA66}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o107"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o106"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o107">
+<a:ObjectID>8D6424E9-89AA-446D-BA55-BB348927B8AF</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o108">
+<a:ObjectID>2432E7CB-1827-4AB3-9065-265BB4DCE2E5</a:ObjectID>
+<a:Name>Num_categorie</a:Name>
+<a:Code>NUM_CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5126CC17-8C88-415E-9C63-35B577C187B6},{CD2AAF82-3C1F-4CD8-A9F7-3279B419B8CC}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o109">
+<a:ObjectID>BCDDA6F5-8E70-48DA-AEFC-F8000C857C71</a:ObjectID>
+<a:Name>description</a:Name>
+<a:Code>DESCRIPTION</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {382547A8-D2AD-4A0B-A7C4-79AD77D7976C}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o110">
+<a:ObjectID>C5427C0D-4109-466A-8177-CB70A29F7D03</a:ObjectID>
+<a:Name>qte_stock</a:Name>
+<a:Code>QTE_STOCK</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {E8CB430B-082E-4358-9900-1B03A178C436}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o111">
+<a:ObjectID>3F7BAB52-26A7-4618-9E10-066531883482</a:ObjectID>
+<a:Name>prix_vente</a:Name>
+<a:Code>PRIX_VENTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {8AAFD9DF-2240-4BF2-A5CF-381F50E04A7A}
+DAT 1619567244</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o112">
+<a:ObjectID>E1558326-C30B-47A9-9112-3198B2DE0F68</a:ObjectID>
+<a:Name>pour</a:Name>
+<a:Code>POUR</a:Code>
+<a:CreationDate>1619796601</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619796682</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>TXT10</a:DataType>
+<a:Length>10</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o113">
+<a:ObjectID>FDF3A85A-57EB-48FC-B1BE-EC39563EE629</a:ObjectID>
+<a:Name>type</a:Name>
+<a:Code>TYPE</a:Code>
+<a:CreationDate>1619796601</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619796682</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>TXT30</a:DataType>
+<a:Length>30</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o114">
+<a:ObjectID>E79B7B9C-1BFC-4010-9DB5-4D922B2E7C7D</a:ObjectID>
+<a:Name>largeur</a:Name>
+<a:Code>LARGEUR</a:Code>
+<a:CreationDate>1619796601</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619796682</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o56">
+<a:ObjectID>9C282BB5-D1FB-4CB7-A9AD-3F452432BBCC</a:ObjectID>
+<a:Name>Categorie</a:Name>
+<a:Code>CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567402</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {7FBE16E2-C187-4B44-B714-A9366418F6AD}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o115">
+<a:ObjectID>48F5A98E-CC30-463E-B405-CD01895852BC</a:ObjectID>
+<a:Name>Num_categorie</a:Name>
+<a:Code>NUM_CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {32A40BF6-CD9D-4261-A8C1-B7D53E2C5D9D}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o116"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o115"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o116">
+<a:ObjectID>3988FFB5-72C9-4F37-A121-B2FE4A9CCC71</a:ObjectID>
+<a:Name>Num_categorie</a:Name>
+<a:Code>NUM_CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5126CC17-8C88-415E-9C63-35B577C187B6}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o117">
+<a:ObjectID>59540BCA-1B78-462D-9726-0ED889920427</a:ObjectID>
+<a:Name>description</a:Name>
+<a:Code>DESCRIPTION</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {88217E9C-B6CD-4B77-8730-165DA3D6DD08}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o57">
+<a:ObjectID>2E90B62A-0751-487A-BB1E-E5BFB1BE6097</a:ObjectID>
+<a:Name>Facture</a:Name>
+<a:Code>FACTURE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {2A92261F-21F2-46B9-A77A-DD22BC910FF6}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o118">
+<a:ObjectID>959CF2A6-71C9-4545-A077-9403C5112F6A</a:ObjectID>
+<a:Name>ref_facture</a:Name>
+<a:Code>REF_FACTURE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4E0B2FCA-F1E8-427B-9C05-34BAF80FA4AC}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o119"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o118"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o119">
+<a:ObjectID>6E51F6BA-32E6-404B-9E17-6F576C7F24E8</a:ObjectID>
+<a:Name>ref_facture</a:Name>
+<a:Code>REF_FACTURE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {CA7B9EC7-3022-4813-8C19-76F497201A1F}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o120">
+<a:ObjectID>1FFB6CF1-E663-4BA1-BCCF-0378772D2C0D</a:ObjectID>
+<a:Name>ref_com</a:Name>
+<a:Code>REF_COM</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {990B37F7-74E3-45E1-B7CD-3239020D4DA5},{B1D3C5D4-DF88-4439-BDD6-6D560AF6195D}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o121">
+<a:ObjectID>E9178E9E-550A-4485-A378-93CD654DBB57</a:ObjectID>
+<a:Name>date_facture</a:Name>
+<a:Code>DATE_FACTURE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {435C312E-DC69-49DD-B6D8-4EDB1EFD9EE8}
+DAT 1619567244</a:History>
+<a:DataType>D</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o122">
+<a:ObjectID>8C392A43-B1C2-4576-A30B-E9F2D7002305</a:ObjectID>
+<a:Name>montant</a:Name>
+<a:Code>MONTANT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {295607C8-B0CC-4F17-B79E-952B90B9A721}
+DAT 1619567244</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o58">
+<a:ObjectID>CFEFF586-A219-4084-BFBB-37267F8D2DD9</a:ObjectID>
+<a:Name>Promotion</a:Name>
+<a:Code>PROMOTION</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {38640B2C-933D-45D3-BE68-AC7D4C72495D}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o123">
+<a:ObjectID>136C7D13-7C0B-415F-B95D-4077D99692B5</a:ObjectID>
+<a:Name>ref_promo</a:Name>
+<a:Code>REF_PROMO</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {F52C1570-1A26-4064-8ACF-4346E7B0B8E5}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o124"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o123"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o124">
+<a:ObjectID>5D005133-FBEB-4641-8F22-600F334B8B02</a:ObjectID>
+<a:Name>ref_promo</a:Name>
+<a:Code>REF_PROMO</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {D357E93E-3783-4DA3-B21E-5BF5E5A6ED42}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o125">
+<a:ObjectID>F4FA040F-58B5-4479-8E1E-328289CC7190</a:ObjectID>
+<a:Name>qte</a:Name>
+<a:Code>QTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4A2B944B-385A-42DA-A7F4-FF71B94DC5EE}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o126">
+<a:ObjectID>72E634D7-AF6B-4B36-9487-886242B2159D</a:ObjectID>
+<a:Name>prix_vente</a:Name>
+<a:Code>PRIX_VENTE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {1BF4A849-E78E-45F0-9E80-3DEFB3AE379C}
+DAT 1619567244</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o127">
+<a:ObjectID>0D159F0A-35F2-43C2-B039-B7B3D9ECE3E2</a:ObjectID>
+<a:Name>remise</a:Name>
+<a:Code>REMISE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5FCB1BAA-AA70-4976-B4D5-3252A64B864E}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o128">
+<a:ObjectID>994536D8-E202-4F4A-8675-1EACB183D8F8</a:ObjectID>
+<a:Name>date_debut</a:Name>
+<a:Code>DATE_DEBUT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {9D41C8F8-AD09-430D-9CF9-ECC8EBC08919}
+DAT 1619567244</a:History>
+<a:DataType>D</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o129">
+<a:ObjectID>E0C44D3E-C6D6-4CB1-A91A-48F19B729CDD</a:ObjectID>
+<a:Name>duree</a:Name>
+<a:Code>DUREE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {261A3321-D707-48DD-BB3B-7D94CCA0D9DF}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o130">
+<a:ObjectID>1DFE7E35-5605-4E14-8B3E-E21FF76EB361</a:ObjectID>
+<a:Name>date_fin</a:Name>
+<a:Code>DATE_FIN</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {03B90EBB-7457-43B4-9383-C66A0CB7AB91}
+DAT 1619778386</a:History>
+<a:DataType>D</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o61">
+<a:ObjectID>547D58A9-F43F-43A2-BC06-F96D149B92BC</a:ObjectID>
+<a:Name>Commande</a:Name>
+<a:Code>COMMANDE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778525</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {68D39454-4109-49A0-8673-4193366D9120}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o131">
+<a:ObjectID>1C534DAA-D5DC-4B5C-9622-ECAC25ED6094</a:ObjectID>
+<a:Name>ref_com</a:Name>
+<a:Code>REF_COM</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {698F0C48-413A-41E0-BA6A-6EB5986548A4}
+DAT 1619567244</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o132"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o131"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o132">
+<a:ObjectID>30CC8A33-9E7A-4452-9F89-CA814BE6F524</a:ObjectID>
+<a:Name>ref_com</a:Name>
+<a:Code>REF_COM</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {990B37F7-74E3-45E1-B7CD-3239020D4DA5}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o133">
+<a:ObjectID>C039D102-E3B0-4F70-9AFF-0567A73C8465</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {23C9B66E-AC5D-4C52-BC42-5FE4EA085EAF},{5BC06993-8971-470F-BBF5-9ADE95F4E280}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o134">
+<a:ObjectID>F1A15877-2461-4955-9B8C-0471C4B38F73</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9},{7004762D-0FBC-483E-A39B-149C4617F24C}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o135">
+<a:ObjectID>6865BC5E-C620-4BC4-9633-0D767BAAE341</a:ObjectID>
+<a:Name>qte_com</a:Name>
+<a:Code>QTE_COM</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {C98546DC-E00B-41F9-B429-283423D61911}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o136">
+<a:ObjectID>A01F6150-B420-46CE-B58D-56C17CB9B5F3</a:ObjectID>
+<a:Name>prix</a:Name>
+<a:Code>PRIX</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {CFCCCD67-F182-4EEF-A1FE-2BEB7FAB7FE2}
+DAT 1619567244</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o137">
+<a:ObjectID>708ADD28-AC2D-49EE-B079-769DACDFB4AF</a:ObjectID>
+<a:Name>avance</a:Name>
+<a:Code>AVANCE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {BDB02907-10B1-4395-B024-9D1A1B22AF1E}
+DAT 1619778386</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o138">
+<a:ObjectID>0EEAF06F-FA11-4887-8183-FBE7176935C2</a:ObjectID>
+<a:Name>date_comm</a:Name>
+<a:Code>DATE_COMM</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {44050FCB-784B-4B0C-9E80-C3C46514FB92}
+DAT 1619778386</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o59">
+<a:ObjectID>8FFA705C-4474-4417-A722-D31847E43C3E</a:ObjectID>
+<a:Name>Consultation</a:Name>
+<a:Code>CONSULTATION</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730403</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4D650C5A-F695-49DD-9D1F-F0C513B859FC}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o139">
+<a:ObjectID>86292296-854B-42AD-A8E0-BB50AED36846</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o140"/>
+<o:EntityAttribute Ref="o141"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o139"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o140">
+<a:ObjectID>E5BFC6C9-B76C-44E3-9B83-37EB5B55C62C</a:ObjectID>
+<a:Name>ref_opti</a:Name>
+<a:Code>REF_OPTI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {1F8ADE85-A2DC-4FC9-B314-ABB4392ADA76},{7ABD7E06-E734-4740-9B5A-DF241F1B8577}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o141">
+<a:ObjectID>948B7D2C-FB7B-428D-A895-5A8642B57DA1</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {23C9B66E-AC5D-4C52-BC42-5FE4EA085EAF},{FDF0DBB1-AD07-454C-B6A5-75715DE5A02A}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o142">
+<a:ObjectID>83C7BEEE-11A4-4391-AE5B-74A02A8B4483</a:ObjectID>
+<a:Name>date_visite</a:Name>
+<a:Code>DATE_VISITE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {65A79739-A6A2-4A25-947E-C4433E2EC687}
+DAT 1619567244</a:History>
+<a:DataType>DT</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o143">
+<a:ObjectID>A5606560-1A0B-4C0B-8B58-2DAF010F19DE</a:ObjectID>
+<a:Name>status</a:Name>
+<a:Code>STATUS</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {B8AFADE1-EBC9-4B18-A97F-74948E2CA8FA}
+DAT 1619567244</a:History>
+<a:DataType>BL</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o144">
+<a:ObjectID>65FEE2B4-0452-4BFB-AF6F-1965425A692B</a:ObjectID>
+<a:Name>description</a:Name>
+<a:Code>DESCRIPTION</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {E08C4E43-31CC-4C40-9C44-526E6FB20C18}
+DAT 1619567244</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o60">
+<a:ObjectID>6FFDAC84-177F-407A-B254-8413B4851C7F</a:ObjectID>
+<a:Name>Panier</a:Name>
+<a:Code>PANIER</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567338</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {093CF2D2-3871-4000-9A1B-D3D91B06B6E1}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o145">
+<a:ObjectID>9A0F68BD-F8C1-446C-B9F2-93C49A476521</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o146"/>
+<o:EntityAttribute Ref="o147"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o145"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o146">
+<a:ObjectID>B863ACE1-8897-49A8-921D-581F6C6D24E0</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9},{366D45FB-C2CA-4993-A9FF-14D4D512F462}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o147">
+<a:ObjectID>DB2D609F-293B-497E-AEC1-BCB51FE30330</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {23C9B66E-AC5D-4C52-BC42-5FE4EA085EAF},{BF9ABA98-A699-4883-BD5E-51353C73DEC8}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o148">
+<a:ObjectID>ADD101C6-A885-4C0D-A3B5-FA0CD389862B</a:ObjectID>
+<a:Name>date_like</a:Name>
+<a:Code>DATE_LIKE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {D620693E-FE7D-486F-84E2-6F238E131652}
+DAT 1619567244</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o149">
+<a:ObjectID>775F159C-8291-4A31-A7B8-DDDEF9EA63CB</a:ObjectID>
+<a:Name>status</a:Name>
+<a:Code>STATUS</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {3A55A430-9F70-40A7-9F90-44FECE3924EC}
+DAT 1619567244</a:History>
+<a:DataType>BL</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o62">
+<a:ObjectID>F0CEBE39-B71F-4996-85BF-73E7FB6BE89D</a:ObjectID>
+<a:Name>Achat</a:Name>
+<a:Code>ACHAT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {FEAD4B78-8279-46B2-81EF-D95C8293F9F2}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o150">
+<a:ObjectID>497A27A4-CC0F-4349-97DF-DA9855569BB6</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o151"/>
+<o:EntityAttribute Ref="o152"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o150"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o151">
+<a:ObjectID>1C6F9943-2284-4911-AC8F-99B6C7341EDF</a:ObjectID>
+<a:Name>ref_fourni</a:Name>
+<a:Code>REF_FOURNI</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {B97A5FFE-B3C9-4AE2-9A89-CA991AFE2C5D},{3A9982D2-BD3B-406C-8306-032F39707C6D}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o152">
+<a:ObjectID>43441270-1935-4B8A-A3CD-23B5A74187CA</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9},{D39C335B-8211-45A6-BAE2-2935573B7BED}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o153">
+<a:ObjectID>79195ACB-88F2-40A7-99E2-BA8C2FC7FA5E</a:ObjectID>
+<a:Name>num_achat</a:Name>
+<a:Code>NUM_ACHAT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {A0EDB913-29B0-41D8-AD7A-4D5CF4A77015}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o154">
+<a:ObjectID>6081B012-70BF-4F06-8686-B0418BDF473E</a:ObjectID>
+<a:Name>qte_achat</a:Name>
+<a:Code>QTE_ACHAT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {9DF00629-B604-4691-A4D4-96A93AAFCCF9}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o155">
+<a:ObjectID>7002334E-38FA-452B-907A-F82D67DF8397</a:ObjectID>
+<a:Name>date_achat</a:Name>
+<a:Code>DATE_ACHAT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {363A216D-859D-4BE6-B99E-9D35C9D8514D}
+DAT 1619567244</a:History>
+<a:DataType>D</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o156">
+<a:ObjectID>BDBFD820-2889-4736-8B42-6B0133506369</a:ObjectID>
+<a:Name>prix_achat</a:Name>
+<a:Code>PRIX_ACHAT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {48EF3236-D43C-4A12-9882-32856968681C}
+DAT 1619567244</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o63">
+<a:ObjectID>6BA2DDE4-A0BA-426E-BEE1-B49F3A9F320A</a:ObjectID>
+<a:Name>Cate_reflexive</a:Name>
+<a:Code>CATE_REFLEXIVE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567402</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {2CFA9AFD-F3F5-4544-9949-225A85827A84}
+DAT 1619567244</a:History>
+<c:Identifiers>
+<o:Identifier Id="o157">
+<a:ObjectID>BBBD75FF-A633-4B48-95A1-9F96221B2974</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567281</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o158"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o157"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o158">
+<a:ObjectID>53EC9318-7C4E-4152-B1E4-07AAD3AC3F26</a:ObjectID>
+<a:Name>Cat_Num_categorie</a:Name>
+<a:Code>CAT_NUM_CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5126CC17-8C88-415E-9C63-35B577C187B6},{ACD9A764-9B6B-45A7-A729-FA46F51A35E1}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o159">
+<a:ObjectID>CC6F4D73-043C-4FF0-BEB9-6486BB9AE9D5</a:ObjectID>
+<a:Name>ref_categorie</a:Name>
+<a:Code>REF_CATEGORIE</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {AAC683C8-8152-4B1A-8803-FAF7F0A5F30C}
+DAT 1619567244</a:History>
+<a:DataType>I</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o65">
+<a:ObjectID>758EE634-343E-4AF7-A01D-1F7C0A08FB41</a:ObjectID>
+<a:Name>Resultat</a:Name>
+<a:Code>RESULTAT</a:Code>
+<a:CreationDate>1619729011</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {DFCC4853-75E4-447D-86D6-00E21C37C7E8}</a:History>
+<c:Identifiers>
+<o:Identifier Id="o160">
+<a:ObjectID>943B5EB4-0B6A-4609-91D9-F7A106AB1C64</a:ObjectID>
+<a:Name>ref_res</a:Name>
+<a:Code>REF_RES</a:Code>
+<a:CreationDate>1619730228</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {66C1A832-7690-48A0-8551-893A827C2E50}</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o161"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o160"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o161">
+<a:ObjectID>1519CE1A-684F-4E4E-9047-6581E351D363</a:ObjectID>
+<a:Name>ref_res</a:Name>
+<a:Code>REF_RES</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {A67FD72A-58A7-4459-B157-F2F3BB89077C}</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o162">
+<a:ObjectID>0CB45E4A-F0F0-4516-A6E6-081715D64A19</a:ObjectID>
+<a:Name>ref_opti</a:Name>
+<a:Code>REF_OPTI</a:Code>
+<a:CreationDate>1619730277</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o163">
+<a:ObjectID>C6C86401-3C49-4D1A-80C5-DE2D0693890C</a:ObjectID>
+<a:Name>ref_client</a:Name>
+<a:Code>REF_CLIENT</a:Code>
+<a:CreationDate>1619730277</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o164">
+<a:ObjectID>4D994001-08E6-4FA0-966E-F8F3FA48A162</a:ObjectID>
+<a:Name>droite</a:Name>
+<a:Code>DROITE</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {E7B580F8-F2B6-4989-AFEA-C05DE7B3B7F7}</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o165">
+<a:ObjectID>5B6308FF-37E7-4567-9F13-B7D658B4542A</a:ObjectID>
+<a:Name>gauche</a:Name>
+<a:Code>GAUCHE</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {923FA277-0FE5-4422-AD2B-57937380597A}</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o166">
+<a:ObjectID>FB1DBFC1-FEBD-4383-8C0B-3A549C3BC20E</a:ObjectID>
+<a:Name>correction_droite</a:Name>
+<a:Code>CORRECTION_DROITE</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {D7DA2F5F-E537-4B12-A8F2-CF07996A81F1}</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o167">
+<a:ObjectID>EA109E0A-C3F3-4091-A727-E1E9D75F68A1</a:ObjectID>
+<a:Name>correction_gauche</a:Name>
+<a:Code>CORRECTION_GAUCHE</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {0BE5AA17-F9E2-4349-84D7-315B5EDA3B15}</a:History>
+<a:DataType>DC</a:DataType>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o168">
+<a:ObjectID>99B43853-962D-43E9-AACE-7847ECB9DA31</a:ObjectID>
+<a:Name>description</a:Name>
+<a:Code>DESCRIPTION</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {57DFC6E9-A024-4E08-813F-9E45D9BE0732}</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o169">
+<a:ObjectID>BE1AD98D-3249-4D53-ABC6-1498A7569EB3</a:ObjectID>
+<a:Name>date_res</a:Name>
+<a:Code>DATE_RES</a:Code>
+<a:CreationDate>1619729015</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {FD421DDB-3456-4A9E-B2E5-CE2D6AD14453}</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o64">
+<a:ObjectID>4DAAC6D2-17DD-4D0D-B6F7-AF436A1A49DE</a:ObjectID>
+<a:Name>Remise</a:Name>
+<a:Code>REMISE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778482</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {05B66C81-8D24-4F93-9B2E-B9A524544BD2}
+DAT 1619778386</a:History>
+<c:Identifiers>
+<o:Identifier Id="o170">
+<a:ObjectID>201ABC0A-DC7B-4438-9964-EB2EB98D003D</a:ObjectID>
+<a:Name>Identifiant_1</a:Name>
+<a:Code>IDENTIFIANT_1</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o171"/>
+<o:EntityAttribute Ref="o172"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o170"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o171">
+<a:ObjectID>BE5964D0-11EF-4ADC-892E-4B8301512B5D</a:ObjectID>
+<a:Name>ref_promo</a:Name>
+<a:Code>REF_PROMO</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {D357E93E-3783-4DA3-B21E-5BF5E5A6ED42},{4A563558-8A03-43B4-AE65-B1243A2409EC}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o172">
+<a:ObjectID>C6BFCBA3-4552-4D8D-AB33-99E86010C8A5</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9},{536B50B3-DA05-499E-803D-E6AF0BFB8866}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+<o:Entity Id="o66">
+<a:ObjectID>1A220089-CC06-4FAD-BF14-83A0F91BC8A7</a:ObjectID>
+<a:Name>Photo</a:Name>
+<a:Code>PHOTO</a:Code>
+<a:CreationDate>1619776765</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778544</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {A2C0E60F-AC07-4F1A-9AEE-8A97F47CEA5C}</a:History>
+<c:Identifiers>
+<o:Identifier Id="o173">
+<a:ObjectID>14AD183D-1AF4-47D8-AB44-587F98148FFE</a:ObjectID>
+<a:Name>ref_photo</a:Name>
+<a:Code>REF_PHOTO</a:Code>
+<a:CreationDate>1619776856</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {58CC71EA-7C1C-44E2-BDA1-33E8EA80E89F}</a:History>
+<c:Identifier.Attributes>
+<o:EntityAttribute Ref="o174"/>
+</c:Identifier.Attributes>
+</o:Identifier>
+</c:Identifiers>
+<c:PrimaryIdentifier>
+<o:Identifier Ref="o173"/>
+</c:PrimaryIdentifier>
+<c:Attributes>
+<o:EntityAttribute Id="o174">
+<a:ObjectID>295ABD8A-B190-4460-BD7D-BD191DAAAD35</a:ObjectID>
+<a:Name>ref_photo</a:Name>
+<a:Code>REF_PHOTO</a:Code>
+<a:CreationDate>1619776792</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {6A707007-C3EA-4101-AE13-E3EE9ADC470F}</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o175">
+<a:ObjectID>DAFB7F6F-D10A-4A4F-93C6-88C408093819</a:ObjectID>
+<a:Name>ref_produit</a:Name>
+<a:Code>REF_PRODUIT</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {78C4CA40-2AD9-4A25-9E58-DF3BF289B4D9},{C0F8580E-EEC0-47F6-BD99-50748E000CAE}
+DAT 1619778386</a:History>
+<a:DataType>I</a:DataType>
+<a:LogicalAttribute.Mandatory>1</a:LogicalAttribute.Mandatory>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o176">
+<a:ObjectID>D8E6A64F-8AB7-4776-9AF8-C882A453FB62</a:ObjectID>
+<a:Name>photo</a:Name>
+<a:Code>PHOTO</a:Code>
+<a:CreationDate>1619776792</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {FC57660A-41F1-47F0-9C9B-0687E0F33A78}</a:History>
+<a:DataType>TXT100</a:DataType>
+<a:Length>100</a:Length>
+</o:EntityAttribute>
+<o:EntityAttribute Id="o177">
+<a:ObjectID>5C56FBB6-15B2-4F2E-AA08-A8F9CC8ABBB6</a:ObjectID>
+<a:Name>date_ajout</a:Name>
+<a:Code>DATE_AJOUT</a:Code>
+<a:CreationDate>1619776792</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {0D2D17E1-3D8C-43E6-98CC-F6248D515A93}</a:History>
+<a:DataType>TS</a:DataType>
+</o:EntityAttribute>
+</c:Attributes>
+</o:Entity>
+</c:Entities>
+<c:Relationships>
+<o:Relationship Id="o8">
+<a:ObjectID>F065AA0D-9C16-4594-BECA-32AD91D3F8F3</a:ObjectID>
+<a:Name>Appaetient</a:Name>
+<a:Code>APPAETIENT</a:Code>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {CD2AAF82-3C1F-4CD8-A9F7-3279B419B8CC}
+DAT 1619567244</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o55"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o56"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o178">
+<a:ObjectID>F6901034-29B9-476E-B90B-68AA2D2BA509</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o116"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o108"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o115"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o24">
+<a:ObjectID>C3262CE9-C3D3-4E61-BD8B-AC85268BEE2F</a:ObjectID>
+<a:Name>Consultation</a:Name>
+<a:Code>CONSULTATION2</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619567367</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {7ABD7E06-E734-4740-9B5A-DF241F1B8577}
+DAT 1619567244
+ATT CRDB
+ATT CMNB
+ATT MNDB</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o54"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o59"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o179">
+<a:ObjectID>615010AA-3FFA-4B07-8ED9-37EA4EA10ACC</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o94"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o140"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o93"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o26">
+<a:ObjectID>1DDE77FE-0C46-4618-BF2E-A126544EDF97</a:ObjectID>
+<a:Name>Consultation</a:Name>
+<a:Code>CONSULTATION3</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {FDF0DBB1-AD07-454C-B6A5-75715DE5A02A}
+DAT 1619567244
+ATT CRDB
+ATT CMNB
+ATT MNDB</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o52"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o59"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o180">
+<a:ObjectID>E094106F-90D2-40A1-8D64-7770A5994B63</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o68"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o141"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o67"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o29">
+<a:ObjectID>6210A882-E3A5-432F-81A0-7FC99578FC49</a:ObjectID>
+<a:Name>Panier</a:Name>
+<a:Code>PANIER2</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619567314</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {366D45FB-C2CA-4993-A9FF-14D4D512F462}
+DAT 1619567244
+ATT CRDB
+ATT CMNB
+ATT MNDB</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o55"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o60"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o181">
+<a:ObjectID>B7E00861-63F3-4671-9C89-04FCCD9F837F</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o146"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o31">
+<a:ObjectID>C53CFD8B-D319-42FB-B048-415B345E3F70</a:ObjectID>
+<a:Name>Panier</a:Name>
+<a:Code>PANIER</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619567338</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {BF9ABA98-A699-4883-BD5E-51353C73DEC8}
+DAT 1619567244
+ATT CRDB
+ATT CMNB
+ATT MNDB</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o52"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o60"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o182">
+<a:ObjectID>F448E890-B8F3-4D71-9F08-B6BCC1DD291B</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o68"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o147"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o67"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o49">
+<a:ObjectID>30232A92-0D0F-455B-BFD1-8BACEF585AAB</a:ObjectID>
+<a:Name>Consultation</a:Name>
+<a:Code>CONSULTATION</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {1F533B86-D3E1-40B0-A076-0AB990D568EE}
+DAT 1619778386</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o65"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o59"/>
+</c:Object2>
+</o:Relationship>
+<o:Relationship Id="o35">
+<a:ObjectID>E7751A38-FBB9-498D-B5CE-A02B79239AD7</a:ObjectID>
+<a:Name>Achat</a:Name>
+<a:Code>ACHAT2</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {3A9982D2-BD3B-406C-8306-032F39707C6D}
+DAT 1619567244</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o53"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o62"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o183">
+<a:ObjectID>A89365F0-1A0D-4159-9172-9F72E7E4AD05</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o81"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o151"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o80"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o20">
+<a:ObjectID>A8183D87-28C5-4C82-89EE-5943CAFF9C1C</a:ObjectID>
+<a:Name>Paiement</a:Name>
+<a:Code>PAIEMENT</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {B1D3C5D4-DF88-4439-BDD6-6D560AF6195D}
+DAT 1619778386</a:History>
+<a:Entity1ToEntity2RoleCardinality>0,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o57"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o61"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o184">
+<a:ObjectID>E636A183-0E8B-481E-B3F2-D303DD61C51F</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o132"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o120"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o131"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o37">
+<a:ObjectID>4FC51953-1C4A-4B90-B288-3B6D93AEF8F2</a:ObjectID>
+<a:Name>Achat</a:Name>
+<a:Code>ACHAT</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>0</a:ModificationDate>
+<a:Modifier/>
+<a:History>ORG {D39C335B-8211-45A6-BAE2-2935573B7BED}
+DAT 1619567244</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o55"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o62"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o185">
+<a:ObjectID>7226FDB2-AEEC-4B2C-A81F-24C729E0B423</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o152"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o40">
+<a:ObjectID>2DED2CAD-B9EC-47C6-A354-F0A8649F898A</a:ObjectID>
+<a:Name>Cate</a:Name>
+<a:Code>CATE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619567402</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {ACD9A764-9B6B-45A7-A729-FA46F51A35E1}
+DAT 1619567244
+ATT NAME
+ATT CODE</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o56"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o63"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o186">
+<a:ObjectID>CA89704E-1FD2-4476-AC14-CB77F80A4870</a:ObjectID>
+<a:CreationDate>1619567243</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619567243</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o116"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o158"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o115"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o15">
+<a:ObjectID>517FFEEF-54FC-485D-AA75-0ED1CB0AA49C</a:ObjectID>
+<a:Name>Passer une Commande</a:Name>
+<a:Code>PASSER_UNE_COMMANDE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778517</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {5BC06993-8971-470F-BBF5-9ADE95F4E280}
+DAT 1619778386
+ATT CRDA
+ATT CMNA
+ATT MNDA</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o61"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o52"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o187">
+<a:ObjectID>630733D1-DB98-41B9-AFD1-5F94A406C0D1</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o68"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o133"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o67"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o44">
+<a:ObjectID>E32A2AE5-2472-4772-8CBC-0B35DA474020</a:ObjectID>
+<a:Name>Remise</a:Name>
+<a:Code>REMISE2</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {4A563558-8A03-43B4-AE65-B1243A2409EC}
+DAT 1619778386</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o58"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o64"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o188">
+<a:ObjectID>1EBE078C-E814-4EE1-9DF6-EDC37982166E</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o124"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o171"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o123"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o46">
+<a:ObjectID>A319A474-FBF9-4317-98CC-3DAEA8266101</a:ObjectID>
+<a:Name>Remise</a:Name>
+<a:Code>REMISE</a:Code>
+<a:CreationDate>0</a:CreationDate>
+<a:Creator/>
+<a:ModificationDate>1619778482</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {536B50B3-DA05-499E-803D-E6AF0BFB8866}
+DAT 1619778386
+ATT CRDB
+ATT CMNB
+ATT MNDB</a:History>
+<a:DependentRole>A</a:DependentRole>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o55"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o64"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o189">
+<a:ObjectID>BE701510-7DD7-4AC9-9E86-1AF1D278C1DD</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o172"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o17">
+<a:ObjectID>E62A19D7-C64C-47FE-886C-705BC99883D3</a:ObjectID>
+<a:Name>Vente</a:Name>
+<a:Code>VENTE</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778525</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {7004762D-0FBC-483E-A39B-149C4617F24C}
+DAT 1619778386
+ATT CRDA
+ATT CMNA
+ATT MNDA</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,n</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,1</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o61"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o55"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o190">
+<a:ObjectID>E3F9FC61-0B5B-46AA-8C06-076DE83DAE83</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o134"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o11">
+<a:ObjectID>9E87DCCA-0459-4305-AF3D-49FB49E9A50D</a:ObjectID>
+<a:Name>avoir</a:Name>
+<a:Code>AVOIR</a:Code>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778600</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:History>ORG {C0F8580E-EEC0-47F6-BD99-50748E000CAE}
+DAT 1619778386</a:History>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>0,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o55"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o66"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o191">
+<a:ObjectID>1D791588-4FEC-49F7-A17D-A8DFB1DB2664</a:ObjectID>
+<a:CreationDate>1619778386</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619778396</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o107"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o175"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o106"/>
+</c:ParentIdentifier>
+</o:Relationship>
+<o:Relationship Id="o51">
+<a:ObjectID>3EEFAD58-BFBD-4284-BD7C-707FA64F09BD</a:ObjectID>
+<a:Name>contient</a:Name>
+<a:Code>CONTIENT</a:Code>
+<a:CreationDate>1619730251</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730403</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:Entity1ToEntity2RoleCardinality>1,1</a:Entity1ToEntity2RoleCardinality>
+<a:Entity2ToEntity1RoleCardinality>1,n</a:Entity2ToEntity1RoleCardinality>
+<c:Object1>
+<o:Entity Ref="o59"/>
+</c:Object1>
+<c:Object2>
+<o:Entity Ref="o65"/>
+</c:Object2>
+<c:Joins>
+<o:RelationshipJoin Id="o192">
+<a:ObjectID>BDE9823F-B857-4CA7-8CEF-0FE9241A54F5</a:ObjectID>
+<a:CreationDate>1619730277</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o140"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o162"/>
+</c:Object2>
+</o:RelationshipJoin>
+<o:RelationshipJoin Id="o193">
+<a:ObjectID>B48EFE68-7CBE-4012-8C81-DD03BB7B0897</a:ObjectID>
+<a:CreationDate>1619730277</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619730301</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<c:Object1>
+<o:EntityAttribute Ref="o141"/>
+</c:Object1>
+<c:Object2>
+<o:EntityAttribute Ref="o163"/>
+</c:Object2>
+</o:RelationshipJoin>
+</c:Joins>
+<c:ParentIdentifier>
+<o:Identifier Ref="o139"/>
+</c:ParentIdentifier>
+</o:Relationship>
+</c:Relationships>
+<c:TargetModels>
+<o:TargetModel Id="o194">
+<a:ObjectID>6BDCD88C-7AE1-438A-9192-1AA4994374B3</a:ObjectID>
+<a:Name>OptiqueMCD</a:Name>
+<a:Code>OPTIQUEMCD</a:Code>
+<a:CreationDate>1619567244</a:CreationDate>
+<a:Creator>Zack Benfarhi</a:Creator>
+<a:ModificationDate>1619727982</a:ModificationDate>
+<a:Modifier>Zack Benfarhi</a:Modifier>
+<a:TargetModelURL>file:///C|/xampp/htdocs/apps/Optique/merise/OptiqueMCD.mcd</a:TargetModelURL>
+<a:TargetModelID>8B4BCFB0-BC27-4154-A8BB-F288EFC703B7</a:TargetModelID>
+<a:TargetModelClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:TargetModelClassID>
+<c:SessionShortcuts>
+<o:Shortcut Ref="o3"/>
+</c:SessionShortcuts>
+</o:TargetModel>
+</c:TargetModels>
+</o:Model>
+</c:Children>
+</o:RootObject>
+
+</Model>
