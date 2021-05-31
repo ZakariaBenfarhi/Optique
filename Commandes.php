@@ -1,5 +1,6 @@
 <?php
-
+require_once 'redirectionIndex.php';
+require_once 'out.php';
 require_once 'DB.php';
 require_once 'headerAdmin.php';
 
@@ -11,6 +12,20 @@ $rs_TTC = mysqli_query($con, $que_TTC);
 ?>
 
 		<div class="container col-md-12" style="padding-top: 5%;">
+			<form action="" method="get">
+    			<div class="row">
+    				<div class="container col-md-6 col-md-offset-3">
+    					<div class="row">
+    						<div class="col-md-8">
+    							<input type="text" placeholder="Search .." name="cle" class="form-control">
+    						</div>
+    						<div class="col-md-4">
+    							<input type="submit" value="Search" class="form-control btn btn-info"> 
+    						</div>
+    					</div>
+    				</div>
+    			</div><br><br><br>
+			</form>
 			<div class="row">
 				<div class="col-md-6">
     				<label style="color: blue; font-size: 20px; padding-left: 100px;"><?php echo "Nombre des Commandes " . mysqli_num_rows($rs_query) . "." ?></label>

@@ -1,7 +1,8 @@
 <?php
 
 //if(!empty($_SESSION["role"]) && $_SESSION["role"]== "Opicien"){
-    
+    require_once 'redirectionIndex.php';
+    require_once 'out.php';
     require_once 'DB.php';
     require_once 'headerAdmin.php';
     

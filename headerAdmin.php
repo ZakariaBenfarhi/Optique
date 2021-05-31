@@ -4,7 +4,7 @@
     
     //if(!empty($_SESSION["role"]) && $_SESSION["role"] == "Opticien"){
         
-        session_start();
+        //session_start();
         if(!empty($_SESSION["role"]) && !empty($_SESSION["email"])){
             $role = $_SESSION["role"];
             $login = $_SESSION["email"];
@@ -57,7 +57,7 @@
 	</head>
 	<body>
     	<div class="navbar navbar-expand-sm navbar-light bg-light">
-			<marquee width="350px" height="70px"><a class="navbar-brand active" style="width: 350px;" href="#"><span><img src="./assets/yeux.jpg" width="50px"></span><span style="color: threedshadow; font-size : 22px; font-weight: bold; font-style: italic; font-family: fantasy;">Optique Shop</span><span style="font-size: 17px; color: blue;"><br><sub style="text-align: center;">Nous Sommes Pas Les Seuls, Mais Nous Sommes Les Meilleurs</sub></span></a></marquee>
+			<marquee width="350px" height="70px"><a class="navbar-brand active" style="width: 350px;" href="Produits.php"><span><img src="./assets/yeux.jpg" width="50px"></span><span style="color: threedshadow; font-size : 22px; font-weight: bold; font-style: italic; font-family: fantasy;">Optique Shop</span><span style="font-size: 17px; color: blue;"><br><sub style="text-align: center;">Nous Sommes Pas Les Seuls, Mais Nous Sommes Les Meilleurs</sub></span></a></marquee>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#nav"> 
 				<span class="navbar-toggler-icon"></span>
 			</button>

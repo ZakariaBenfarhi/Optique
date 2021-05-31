@@ -1,6 +1,7 @@
 <?php
 //if(!empty($_SESSION["role"]) && $_SESSION["role"] == "Opticien"){
-    
+    require_once 'redirectionIndex.php';
+    require_once 'out.php';
     require_once 'DB.php';
     require_once 'headerAdmin.php';
     
@@ -20,23 +21,35 @@
                     $que_achat = "delete from achat where ref_produit = " . $ref;
                     if(mysqli_query($con, $que_achat)){
                         
-                        $query = "delete from produit where ref_Produit = " . $ref;
-                        if(mysqli_query($con, $query)){
-                            echo '<div class="alert alert-success alert-dismissible fade show form-control" role="alert" style="text-align:center; font-size:25px;">
-                                    Suppression avec Success
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>';
+                        $que_panier = "delete from panier where ref_produit = " . $ref;
+                        if(mysqli_query($con, $que_panier)){
+                            
+                            $que_remise = "delete from remise where ref_produit = " . $ref;
+                            if(mysqli_query($con, $que_remise)){
+                                
+                                $que_promo = "delete from promotion where ref_produit = " . $ref;
+                                if(mysqli_query($con, $que_promo)){
+                                    $query = "delete from produit where ref_Produit = " . $ref;
+                                    if(mysqli_query($con, $query)){
+                                        echo '<div class="alert alert-success alert-dismissible fade show form-control" role="alert" style="text-align:center; font-size:25px;">
+                                                Suppression avec Success
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>';
+                                    }
+                                    else {
+                                        echo '<div class="alert alert-danger alert-dismissible fade show form-control" role="alert" style="text-align:center; font-size:25px;">
+                                                Suppression a echouee !
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>';
+                                    }
+                                }
+                            }
                         }
-                        else {
-                            echo '<div class="alert alert-danger alert-dismissible fade show form-control" role="alert" style="text-align:center; font-size:25px;">
-                                    Suppression a echouee !
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>';
-                        }
+                        
                     }
                 }
             } 

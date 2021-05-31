@@ -1,6 +1,7 @@
 <?php
-
-session_start();
+require_once 'redirectionIndex.php';
+require_once 'out.php';
+//session_start();
 require_once 'DB.php';
 
 if(!empty($_GET["q"])){
@@ -100,7 +101,7 @@ if(!empty($_SESSION["role"]) && !empty($_SESSION["email"]) && $_SESSION["role"] 
 
 
 if(isset($_GET["ref_prod"]) && !empty($_GET["ref_prod"])){
-    $que_panier_produit = "select * from produit p, panier n, categorie c where c.ref_cat = p.ref_cat and n.ref_produit = p.ref_Produit";
+    $que_panier_produit = "select distinct * from produit p, panier n, categorie c where c.ref_cat = p.ref_cat and n.ref_produit = p.ref_Produit and n.ref_user in (select u.ref_client from users u where u.email = '". $_SESSION["email"] ."') and p.ref_Produit =" . $_GET["ref_prod"];
     $rs_panier_produit = mysqli_query($con, $que_panier_produit);
     
     
@@ -155,11 +156,6 @@ if(isset($_GET["ref_cli"]) && !empty($_GET["ref_cli"])){
     $rs_lister_panier = mysqli_query($con, $que_lister_panier);
 }
 
-if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
-    $que_vider_panier = "update panier set status = 0 where ref_user in (select ref_client from users where email = '" . $_SESSION["email"] . "'";
-    mysqli_query($con, $que_vider_panier);
-    header("location:OptiqueShop.php");
-}
 
 ?> 
 
@@ -244,8 +240,13 @@ if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
     						<span class="label label-pill count"><img src="./assets/panier.ico" width="25px">
     							<?php $que_panier_notif = "select * from panier n, produit p, users u where n.ref_user = u.ref_client and n.ref_produit = p.ref_Produit and n.status = 1 and u.email = '" . $_SESSION["email"] . "'"; ?>
                                 <?php $rs_panier_notif = mysqli_query($con, $que_panier_notif); ?>
-    							<?php if($count_panier = mysqli_num_rows($rs_panier_notif) > 0){ ?>
-    								<span class="badge position-absolute top-0 left-100 translate-middle bg-danger" style="background-color: red"><?php echo $count_panier ?></span>
+                                
+                                <?php $que_count_panier = "select count(*) counting_panier from panier where status = 1 and ref_user in (select ref_client from users where email = '" . $_SESSION["email"] . "')" ?>
+                                <?php $rs_count_panier = mysqli_query($con, $que_count_panier) ?>
+                                <?php $et_count_panier = mysqli_fetch_assoc($rs_count_panier) ?>
+                                <?php $count_panier = $et_count_panier["counting_panier"] ?>
+    							<?php if($count_panier > 0){ ?>
+    								<span class="badge position-absolute top-0 left-100 translate-middle bg-danger" style="background-color: red; border-radius: 50%; font-size: 14px; color: white"><?php echo $count_panier ?></span>
     							<?php } ?> 
     						</span>
     					</a>
@@ -258,7 +259,7 @@ if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
     							<div class="col-md-12">
         							<div class="row">
         								<div class="col-md-6">
-        									<a href="" class="btn btn-outline-warning">Vider Mon Panier</a>
+        									<a href="OptiqueShop.php?vider=true&user=<?php echo $_SESSION["email"] ?>" class="btn btn-outline-warning">Vider Mon Panier</a>
         								</div>
         								<div class="col-md-6">
         									<a href="paniers.php?ref_cli=<?php echo $_SESSION["email"] ?>" class="btn btn-info">Lister Mon Panier</a>
@@ -267,8 +268,8 @@ if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
         							<div class="dropdown-divider"></div>
         						</div>
     							<?php while ($fetch_panier_notif = mysqli_fetch_assoc($rs_panier_notif)){ ?>
-    								<a href="paniers.php?ref_prod=<?php echo $fetch_panier_notif['ref_produit'] ?>" style="text-decoration: none;">
-        								<li class="myCard" style=" width: 400px">
+    								<li class="myCard" style="width: 340px">
+    									<a href="paniers.php?ref_prod=<?php echo $fetch_panier_notif['ref_produit'] ?>" style="text-decoration: none;">
         									<div class="row g-0">
         										<div class="col-md-4" style="padding-left: 30px; padding-top: 30px; padding-bottom: 30px">
                         							<?php $pic = "SELECT ph.photo as imgg from photo ph, produit p WHERE p.ref_Produit = ph.ref_produit and p.ref_Produit = " . $fetch_panier_notif["ref_Produit"] . " ORDER by ph.ref_photo DESC LIMIT 1"; ?>
@@ -277,16 +278,20 @@ if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
                                                    	<img src="<?php echo 'img/'.$data_pic['imgg'] ?>" width="90" height="90" style="border-radius: 20px;">
                                             	</div> 	
                                             	<div class="col-md-8" style="padding-top: 30px">
-                                            		<h5><?php echo $fetch_panier_notif['titre'] ?></h5>
+                                            		<h5 style="color: blue;"><?php echo $fetch_panier_notif['titre'] ?></h5>
                     								<p style="color: black"><?php echo $fetch_panier_notif['prix_vente'] . " DH" ?></p>
                     								<footer class="bottom">
                     									<small class="text-muted"><?php echo $fetch_panier_notif["date_like"] ?></small>
                     								</footer>
                     							</div>
                 							</div>
-                							<div class="dropdown-divider"></div>
-                						</li>
-            						</a>
+                						</a> 
+                						<div class="row">
+                    						<div class="col-md-8"></div>
+                    						<div class="col-md-4"><a href="OptiqueShop.php?removed=<?php echo $fetch_panier_notif["ref_produit"] ?>" class="btn btn-danger">Remove</a></div>
+                    					</div>
+                						<div class="dropdown-divider"></div>
+                					</li>
     							<?php } ?>
     						</ul> 
     					<?php } ?>
@@ -655,7 +660,68 @@ if(isset($_GET["vider"]) && $_GET["vider"] == "true" && !empty($_GET["user"])){
                        					</div>
                        				</div> 
     								<?php while ($et_panier_produit = mysqli_fetch_assoc($rs_panier_produit)){ ?>
-    									
+    									<div class="container col-md-10 col-md-offset-1" style="padding-top: 10%;">
+                               					<div class="row">
+                               						<div class="col-md-6">
+                               							<label>Titre d'Article : <span style="color: blue;"><?php echo $et_panier_produit["titre"] ?></span></label>
+                               						</div>
+                               						<div class="col-md-6">
+                               							<label>Catégorie : <span style="color: blue;"><?php echo $et_panier_produit["descrip_cat"] ?></span></label>
+                               						</div>
+                               					</div><br>
+                               					<div class="row">
+                               						<div class="col-md-6">
+                               							<label>Réservé Pour : <span style="color: blue;"><?php echo $et_panier_produit["pour"] ?></span></label>
+                               						</div>
+                               						<div class="col-md-6">
+                               							<label>Prix d'Article : <span style="color: blue; font-size: 20px;"><strong><?php echo "&nbsp;" . $et_panier_produit["prix_vente"] . " Dh" ?></strong></span></label>
+                               						</div>
+                               					</div><br>
+                               					<?php if(!empty($et_panier_produit["type"]) && !empty($et_panier_produit["largeur"])){ ?>
+                               					<div class="row">
+                               						<div class="col-md-6">
+                               							<label>Type des Lunettes : <span style="color: blue;"><?php echo $et_panier_produit["type"] ?></span></label>
+                               						</div>
+                               						<div class="col-md-6">
+                               							<label>Largeur des Lunettes : <span style="color: blue;"><?php echo $et_panier_produit["largeur"] . " mm" ?></span></label>
+                               						</div>
+                               					</div><br>
+                               					<?php } ?>
+                               					<?php if(!empty($et_panier_produit["ref_lentille"]) && !empty($et_panier_produit["type_lentille"])){ ?>
+                               						<div class="row">
+                                   						<div class="col-md-6">
+                                   							<label>La Référence des Lentilles : <span style="color: blue;"><?php echo $et_panier_produit["ref_lentille"] ?></span></label>
+                                   						</div>
+                                   						<div class="col-md-6">
+                                   							<label>Type des Lentilles : <span style="color: blue;"><strong><?php echo $et_panier_produit["type_lentille"] ?></strong></span></label>
+                                   						</div>
+                               						</div><br>
+                               					<?php } ?>
+                               					<div class="dropdown-divider" style="width: 50%; text-align: center;"></div>
+                               					<div class="row">
+                               						<label style="font-size: 25px;">Description :</label>
+                               						<label><?php echo $et_panier_produit["descrip"] ?></label>
+                               					</div>
+                               					<div class="" style="padding-top: 9%;">
+                               						<?php $que_reco = "select COUNT(ref_produit) / (SELECT COUNT(*) FROM panier) as reco FROM panier WHERE ref_produit =" . $_GET["ref_prod"] ?>
+                               						<?php $rs_reco = mysqli_query($con, $que_reco); ?>
+                               						<?php while ($et_reco = mysqli_fetch_assoc($rs_reco)){ ?>
+                               							<?php if($et_reco["reco"] >= 0 && $et_reco <= 0.2){ ?>
+                               								<h3>Recommandation : 1/5</h3>
+                               							<?php } else if ($et_reco["reco"] > 0.2 && $et_reco["reco"] <= 0.4){ ?>
+                               								<h3>Recommandation : 2/5</h3>
+                               							<?php } else if ($et_reco["reco"] > 0.4 && $et_reco["reco"] <= 0.6){ ?>
+                               								<h3>Recommandation : 3/5</h3>
+                               							<?php } else if ($et_reco["reco"] > 0.6 && $et_reco["reco"] <= 0.8){ ?>
+                               								<h3>Recommandation : 4/5</h3>
+                               							<?php } else if ($et_reco["reco"] > 0.8){ ?>
+                               								<h3>Recommandation : 5/5</h3>
+                               							<?php } else { ?>
+                               								<h3>No Recommandation Yet</h3>
+                               							<?php } ?>
+                               						<?php } ?>
+                               					</div>
+                               				</div>
     								<?php } ?>
     							<?php } elseif (!empty($_GET["ref_cli"])){ ?>
     								<?php while ($et_lister_panier = mysqli_fetch_assoc($rs_lister_panier)){ ?>

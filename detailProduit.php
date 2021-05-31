@@ -1,26 +1,91 @@
 <?php
 //if(!empty($_SESSION["role"]) && $_SESSION["role"] == "Opticien"){
+    require_once 'redirectionIndex.php';
+    require_once 'out.php';
     require_once 'DB.php';
     require_once 'headerAdmin.php';
     
-    
-    $ref = $_GET["ref"];
-    
-    $cc = 0;
-    $query = "select * from produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = " . $ref;
-    $rs_query = mysqli_query($con, $query);
-    
-    
-    
-    $que_img = "select * from photo where ref_produit = " . $ref;
-    $rs_img = mysqli_query($con, $que_img);
-    
-    $count_img = mysqli_num_rows($rs_img);
-
+    if(!empty($_GET["ref"]) && isset($_GET["ref"])){
+        $ref = $_GET["ref"];
+        
+        $cc = 0;
+        $query = "select * from produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = " . $ref;
+        $rs_query = mysqli_query($con, $query);
+        
+        
+        
+        function make_query($con) {
+            $ref = $_GET["ref"];
+            $query_pic = "select pi.* from photo pi, panier p where p.ref_produit = pi.ref_produit and p.ref_produit = " . $ref;
+            $rs_pic = mysqli_query($con, $query_pic);
+            return $rs_pic;
+        }
+        
+        function make_slide_indicators($con) {
+            $output = '';
+            $count = 0;
+            $result = make_query($con);
+            while ($row = mysqli_fetch_array($result)) {
+                if($count == 0){
+                    $output .= '<li data-target="#dynamic_slide_show" data-slide-to="'.$count.'" class="active"></li>';
+                }
+                else {
+                    $output .= '<li data-target="#dynamic_slide_show" data-slide-to="'.$count.'"></li>';
+                }
+                $count = $count + 1;
+            }
+            return $output;
+        }
+        
+        function make_slides($con) {
+            $output = '';
+            $count = 0;
+            $result = make_query($con);
+            while($row = mysqli_fetch_array($result))
+            {
+                if($count == 0)
+                {
+                    $output .= '<div class="item active">';
+                }
+                else
+                {
+                    $output .= '<div class="item">';
+                }
+                $output .= '<img src="img/'.$row["photo"].'" width="70%" height="200" align="center" /> </div>';
+                $count = $count + 1;
+            }
+            return $output;
+        }
+        
+    }
 ?> 
-
-		<div style="padding-top: 5%;">
-			<div class="container col-md-6 col-md-offset-3">
+		<?php if(isset($_GET["ref"]) && !empty($_GET["ref"])){ ?>
+        	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <?php } ?>
+		<div style="padding-top: 3%;">
+			<div class=" container col-md-6 col-md-offset-3">
+        		<div id="dynamic_slide_show" class="carousel slide" data-ride="carousel">
+                   	<ol class="carousel-indicators">
+                      	<?php echo make_slide_indicators($con); ?>
+                    </ol>
+    				<div class="carousel-inner" align="center">
+                     	<?php echo make_slides($con); ?>
+                    </div>
+                    <a class="left carousel-control" href="#dynamic_slide_show" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                       	<span class="sr-only">Previous</span>
+                    </a>
+                    
+                   	<a class="right carousel-control" href="#dynamic_slide_show" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                     	<span class="sr-only">Next</span>
+                 	</a>
+              	</div>
+            </div> 
+			<div class="container col-md-6 col-md-offset-3" style="padding-top: 3%;">
 				<?php while ($et_query = mysqli_fetch_assoc($rs_query)){ ?>
 					<div class="card">
 						<div class="card-header"><?php echo $et_query["titre"] ?></div>
@@ -74,10 +139,10 @@
            						</div>
         					</div>
 						</div>
-					</div>
+					</div><br><br><br><br><br><br><br><br><br><br><br><br> 
 				<?php } ?>
-			</div><br><br> 
-		</div><br>
+			</div><br><br><br><br> 
+		</div><br><br><br>
 	</body>
 </html>
 

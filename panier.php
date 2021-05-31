@@ -1,4 +1,6 @@
 <?php
+require_once 'redirectionIndex.php';
+require_once 'out.php';
 require_once 'DB.php';
 
 $produit = $_GET["produit"];
