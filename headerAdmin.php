@@ -75,6 +75,8 @@
     						<button type="button" class="dropdown-item notify" data-toggle="modal" data-target="#exampleModal2" style="">Ajouter Lentille</button>
     						<div class="dropdown-divider"></div>
     						<button type="button" class="dropdown-item notify" data-toggle="modal" data-target="#exampleModal23">Postuler des Promotions</button>
+    						<div class="dropdown-divider"></div>
+    						<a class="dropdown-item notify" href="Promotions.php">Lister Les Promotions</a>
     					</div>
     				</li>
     				

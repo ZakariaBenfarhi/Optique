@@ -19,6 +19,11 @@
             }
         }
     }
+    
+    
+    
+    
+    header("location:Promotions.php");
 ?>
 
 

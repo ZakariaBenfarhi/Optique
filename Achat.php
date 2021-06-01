@@ -4,9 +4,18 @@ require_once 'out.php';
 require_once 'DB.php';
 require_once 'headerAdmin.php';
 
-
-$que = "select * from achat a, users u, produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = a.ref_produit and a.ref_fourni = u.ref_client order by a.ref_achat desc";
+$search = "";
+if(isset($_GET["s"])){
+    $search = $_GET["s"];
+    $que = "select * from achat a, users u, produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = a.ref_produit and a.ref_fourni = u.ref_client and (p.titre like '%" . $search . "%' or c.descrip_cat like '%" . $search . "%' or p.descrip like '%" . $search . "%' or u.nom like '%" . $search . "%' or u.prenom like '%" . $search . "%') order by a.ref_achat desc";
+    $que_Acat_TTC = "SELECT SUM(a.qte_achat * a.prix_achat) as TTC from achat a, users u, produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = a.ref_produit and a.ref_fourni = u.ref_client and (p.titre like '%" . $search . "%' or c.descrip_cat like '%" . $search . "%' or p.descrip like '%" . $search . "%' or u.nom like '%" . $search . "%' or u.prenom like '%" . $search . "%')";
+}
+else {
+    $que = "select * from achat a, users u, produit p, categorie c where c.ref_cat = p.ref_cat and p.ref_Produit = a.ref_produit and a.ref_fourni = u.ref_client order by a.ref_achat desc";
+    $que_Acat_TTC = "SELECT SUM(a.qte_achat * a.prix_achat) as TTC from achat a";
+}
 $rs_que = mysqli_query($con, $que);
+$rs_Achat_TTC = mysqli_query($con, $que_Acat_TTC);
 
 $que_four = "select * from users where role = 'Fournisseur' and status = 1 order by date_creation";
 $rs_four = mysqli_query($con, $que_four);
@@ -14,8 +23,8 @@ $rs_four = mysqli_query($con, $que_four);
 $que_prod = "select * from produit p, categorie c where c.ref_cat = p.ref_cat";
 $rs_prod = mysqli_query($con, $que_prod);
 
-$que_Acat_TTC = "SELECT SUM(a.qte_achat * a.prix_achat) as TTC from achat a";
-$rs_Achat_TTC = mysqli_query($con, $que_Acat_TTC);
+
+
 
 if(isset($_POST["valider"])){
     if($_POST["qte"] && $_POST["prix"]){
@@ -56,7 +65,7 @@ if(isset($_POST["valider"])){
     					<div class="container col-md-6 col-md-offset-3">
     						<div class="row">
     							<div class="col-md-8">
-    								<input type="text" placeholder="Search .." name="cle" class="form-control">
+    								<input type="text" placeholder="Search .." name="s" class="form-control" value="<?php echo $search ?>">
     							</div>
     							<div class="col-md-4">
     								<input type="submit" value="Search" class="form-control btn btn-info"> 
@@ -70,11 +79,16 @@ if(isset($_POST["valider"])){
     					<label style="color: blue; font-size: 20px; padding-left: 100px;"><?php echo "Nombre des Transactions Effectue est " . mysqli_num_rows($rs_que) . " d'Achats." ?></label>
     				</div>
     				<div class="col-md-6">
-    				<?php while ($et_Achat_TTC = mysqli_fetch_assoc($rs_Achat_TTC)){ ?>
-        				<strong><label style="color: black; font-size: 20px;">Les Achats Effectue durant ces Commandes le TTC : <span style="color: blue; font-size: 22px;"><?php echo $et_Achat_TTC["TTC"] . " Dhs" ?></span></label></strong>
-        			<?php } ?>
+    				<?php if(mysqli_num_rows($rs_que) != 0){ ?>
+        				<?php while ($et_Achat_TTC = mysqli_fetch_assoc($rs_Achat_TTC)){ ?>
+            				<strong><label style="color: black; font-size: 20px;">Les Achats Effectue durant ces Commandes le TTC : <span style="color: blue; font-size: 22px;"><?php echo $et_Achat_TTC["TTC"] . " Dhs" ?></span></label></strong>
+            			<?php } ?>
+        			<?php } else { ?>
+        				<strong><label style="color: black; font-size: 20px;">Aucune Achat est trouvee pour cette Recherche { <?php echo $search ?> }</label></strong>
+            		<?php } ?>
     			</div>
     			</div><br>
+    			<?php if(mysqli_num_rows($rs_que) != 0){ ?>
 				<table class="table table-hover">
 					<tr class="thead-light">
 						<th style="width: 160px;">Titre d'Article</th> 
@@ -107,6 +121,9 @@ if(isset($_POST["valider"])){
 					</tr> 
 					<?php } ?>
 				</table>
+				<?php } else { ?>
+					<?php echo '<div class="alert alert-info" style="width:100%; text-align:center;">(0) Produits Pour Cette Recherche { ' . $search . ' }</div>' ?>
+				<?php } ?>
 			</div><br><br>
 		</div><br><br><br>
 		
@@ -166,6 +183,5 @@ if(isset($_POST["valider"])){
                	</div>
          	</div>
       	</div>
-      	
 	</body> 
 </html>

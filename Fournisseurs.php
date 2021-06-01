@@ -4,16 +4,24 @@ require_once 'out.php';
 require_once 'DB.php';
 require_once 'headerAdmin.php';
 
-
-$query = "select * from users where role = 'Fournisseur' order by ref_client desc";
+$search = "";
+if(isset($_GET["s"])){
+    $search = $_GET["s"];
+    $query = "select * from users where role = 'Fournisseur' and (nom like '%" . $search . "%' or prenom like '%" . $search . "%' or email like '%" . $search . "%' or telephone like '%" . $search . "%') order by ref_client desc";
+}
+else {
+    $query = "select * from users where role = 'Fournisseur' order by ref_client desc";
+}
 $rs = mysqli_query($con, $query);
+
+
 ?> 
 
 		<div class="container col-md-10 col-md-offset-1" style="padding-top: 5%;">
-			<form action="" method="post">
+			<form action="" method="get">
     			<div class="row" style="padding-left: 350px; padding-right: 350px;">
             		<div class="col-md-9">
-            			<input type="text" placeholder="Search .." name="motcle" class="form-control">
+            			<input type="text" placeholder="Search .." name="s" class="form-control" value="<?php echo $search ?>">
             		</div>
           			<div class="col-md-3">
             			<input type="submit" class="btn btn-primary form-control" value="Search">
